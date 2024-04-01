@@ -1,9 +1,25 @@
-<html>
+<!DOCTYPE html><html lang=“en”>
   <head>
-    <script src="scripts.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset=“UTF-8”>
+    <title>Button Rotation</title>
+    <style>
+      button {
+        padding: 10px;
+        border-radius: 50%;
+        border: none;
+        background-color: lightblue;
+      }
+    </style>
   </head>
   <body>
-    <a id="pizdec">Скрипто-кнопка</a>
+    <button id=“rotateButton”>Кнопочкк</button>
+    <script>
+      document.getElementById(“rotateButton”).addEventListener(“click”, function() {
+      this.style.transform = “rotate(360deg)”;
+      setTimeout(function() {
+      this.style.transform = “”;
+      }.bind(this), 1000);
+      });
+    </script>
   </body>
 </html>
